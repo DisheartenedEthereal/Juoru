@@ -10,7 +10,7 @@ from helpers.terminal_helper import print_colored
 
 
 
-node2 = Network("192.168.56.1")
+node2 = Network("192.168.1.35")
 node2.start(5051)
 
 
@@ -19,7 +19,7 @@ print_colored("PORT 5051 is started active Please enter a key to continue","gree
 input()
 
 
-#node2.connectToNode("192.168.56.1",5050)
+node2.connectToNode("192.168.1.35",5050)
 
 
 """node2.connectToNode("192.168.56.1",5055)
