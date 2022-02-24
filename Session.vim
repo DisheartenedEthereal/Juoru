@@ -10,10 +10,9 @@ endif
 set shortmess=aoO
 argglobal
 %argdel
-$argadd README.md
-edit README.md
+$argadd .gitignore
+edit .gitignore
 argglobal
-balt Makefile
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -31,8 +30,7 @@ normal! zt
 keepjumps 2
 normal! 02|
 tabnext 1
-badd +0 README.md
-badd +2 Makefile
+badd +0 .gitignore
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
 endif
