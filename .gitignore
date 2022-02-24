@@ -1,5 +1,5 @@
 # Python venv
-impl/.venv/*
+impl/.venv/
 # Prerequisites
 *.d
 
