@@ -13,6 +13,7 @@ argglobal
 $argadd .gitignore
 edit .gitignore
 argglobal
+balt Makefile
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -23,14 +24,17 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 2 - ((1 * winheight(0) + 20) / 41)
+let s:l = 4 - ((3 * winheight(0) + 20) / 40)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 2
-normal! 05|
+keepjumps 4
+normal! 0
 tabnext 1
+badd +1 boilerplate/p2p_network/helpers/__init__.py
 badd +0 .gitignore
+badd +2 Makefile
+badd +43 boilerplate/p2p-chat/chat.py
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
 endif
